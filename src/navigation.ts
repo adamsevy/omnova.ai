@@ -6,14 +6,6 @@ export const headerData = {
       text: 'How It Works',
       href: getPermalink('/#features'),
     },
-    {
-      text: 'About',
-      href: getPermalink('/#about'),
-    },
-    {
-      text: 'Get Started',
-      href: getPermalink('/#contact'),
-    },
   ],
 };
 
