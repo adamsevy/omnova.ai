@@ -41,6 +41,8 @@
         this.particles.push({
           x: Math.random() * this.canvas.width,
           y: Math.random() * this.canvas.height,
+          originalX: 0,
+          originalY: 0,
           vx: (Math.random() - 0.5) * 0.8,
           vy: (Math.random() - 0.5) * 0.8,
           radius: Math.random() * 2.5 + 1.5,
@@ -49,6 +51,12 @@
           pulseSpeed: 0.03 + Math.random() * 0.03
         });
       }
+      
+      // Set original positions for spring-back effect
+      this.particles.forEach(p => {
+        p.originalX = p.x;
+        p.originalY = p.y;
+      });
     }
     
     drawParticle(particle) {
@@ -96,6 +104,32 @@
           particle.vy -= dy * 0.002;
         }
       }
+      
+      // Spring force back to original position (prevents clustering)
+      const dxFromOrigin = particle.originalX - particle.x;
+      const dyFromOrigin = particle.originalY - particle.y;
+      const distFromOrigin = Math.sqrt(dxFromOrigin * dxFromOrigin + dyFromOrigin * dyFromOrigin);
+      
+      // Gentle pull back to original position
+      if (distFromOrigin > 50) {
+        particle.vx += dxFromOrigin * 0.0002;
+        particle.vy += dyFromOrigin * 0.0002;
+      }
+      
+      // Particle-to-particle repulsion (prevents blob formation)
+      this.particles.forEach(other => {
+        if (other !== particle) {
+          const dx = particle.x - other.x;
+          const dy = particle.y - other.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          
+          if (dist < 40 && dist > 0) {
+            const force = (40 - dist) / 40;
+            particle.vx += (dx / dist) * force * 0.1;
+            particle.vy += (dy / dist) * force * 0.1;
+          }
+        }
+      });
       
       if (particle.x < 0 || particle.x > this.canvas.width) particle.vx *= -1;
       if (particle.y < 0 || particle.y > this.canvas.height) particle.vy *= -1;
