@@ -1,68 +1,190 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'OmNova - Hire Genius-Level AI Teams',
-  description:
-    'For the first time, organizations of any size can access expert-level intelligence, working 24/7, tailored precisely to their challenges.',
+  title: 'OmNova Dynamis - Due Diligence at Machine Speed',
+  description: 'Enterprise-grade due diligence powered by coordinated teams of 200+ AI agents. Comprehensive intelligence in 48 hours for PE and VC firms.',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget -->
-  <Hero>
-    <Fragment slot="title">Hire Genius-Level AI Teams.<br />On Demand.</Fragment>
-
+  <!-- Hero Section -->
+  <Hero
+    id="hero"
+    title="Due Diligence at Machine Speed. Strategic Intelligence at Human Depth."
+    tagline="OmNova Dynamis"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Schedule Demo',
+        href: '#contact',
+        icon: 'tabler:calendar',
+      },
+      {
+        variant: 'secondary',
+        text: 'View Platform',
+        href: '#platform',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
     <Fragment slot="subtitle">
-      For the first time, organizations of any size can access expert-level intelligence, working 24/7, tailored
-      precisely to their challenges. No massive overhead. No long contracts. Just results.
+      <span class="text-lg md:text-xl text-gray-600 dark:text-gray-300">
+        Deploy coordinated teams of <span class="font-semibold text-primary">200+ specialized AI agents</span> to deliver 
+        comprehensive due diligence in <span class="font-semibold">48 hours</span> — giving PE and VC firms the depth 
+        of a Big 4 engagement at a fraction of the time and cost.
+      </span>
+    </Fragment>
+
+    <Fragment slot="content">
+      <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+        <div class="flex items-center gap-2">
+          <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
+          <span>Trusted by leading PE/VC firms</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
+          <span>Enterprise-grade orchestration</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
+          <span>200+ agents per engagement</span>
+        </div>
+      </div>
     </Fragment>
   </Hero>
 
-  <!-- Note Widget -->
-  <Note>
-    <Fragment slot="title">Better Human Hypothesis</Fragment>
-
-    <Fragment slot="description">
-      Amplify human capabilities with AI. The most human-centric organizations will be the most successful.
-    </Fragment>
-  </Note>
-
-  <!-- Features Widget -->
+  <!-- Problem Statement -->
   <Features
-    id="features"
-    tagline="Platform"
-    title="How It Works"
-    subtitle="OmNova deploys dynamic teams of AI agents to tackle your most important work."
+    id="problem"
+    title="Traditional Due Diligence Is Broken"
+    subtitle="PE and VC firms face an impossible tradeoff: speed vs. depth. Until now."
+    columns={3}
     items={[
       {
-        title: 'Comprehensive Context',
-        description:
-          'Your AI agents are not operating in a vacuum. They see your business holistically—your goals, your systems, your market, your history. This comprehensive context is what separates genius-level thinking from generic automation.',
-        icon: 'tabler:brain',
+        title: 'Too Slow',
+        description: 'Traditional DD takes 4-8 weeks. Markets move faster. Deals are lost waiting for analysis.',
+        icon: 'tabler:clock-x',
       },
       {
-        title: 'Permissionless Leverage',
-        description:
-          'For the first time, leverage is available to everyone. Our AI agents scale like software but work like teams. Deploy instantly. No permission needed. No marginal cost per additional capability.',
+        title: 'Too Expensive',
+        description: 'Big 4 consulting engagements cost $150K-$500K per deal. This limits how deep you can go.',
+        icon: 'tabler:currency-dollar-off',
+      },
+      {
+        title: 'Too Shallow',
+        description: 'Rushing the process means missing critical risks. Surface-level analysis leads to bad bets.',
+        icon: 'tabler:file-search',
+      },
+    ]}
+  />
+
+  <!-- The Dynamis Solution -->
+  <Features3
+    id="platform"
+    title="The Dynamis Impossible Teams Solution"
+    subtitle="Five coordinated phases. Hundreds of specialized agents. Enterprise-grade intelligence at machine speed."
+    columns={3}
+    items={[
+      {
+        title: 'Phase 1: Brand & Market Intelligence',
+        description: 'Deep research on brand positioning, consumer perceptions, competitive landscape, and market dynamics. Produces a comprehensive Brand Graph.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Phase 2: Strategy Council',
+        description: 'Multi-agent strategy ensemble synthesizes research into campaign briefs with message architecture and channel direction.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Phase 3: Creative Direction',
+        description: 'Audience-grounded creative briefs and execution frameworks optimized for every relevant channel.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Phase 4: Cohort Testing',
+        description: 'AI persona agents representing your target audience test every message before launch with honest, actionable feedback.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Phase 5: Continuous Monitoring',
+        description: 'Real-time market monitoring, sentiment tracking, and competitive intelligence feeding recursive improvement.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <!-- Primary Services -->
+  <Features
+    id="services"
+    title="Our Core Services"
+    subtitle="Purpose-built for private equity and venture capital"
+    columns={3}
+    items={[
+      {
+        title: 'Due Diligence',
+        description: 'Comprehensive pre-acquisition intelligence across brand, market, competitive landscape, and operational risks. 48-hour turnaround.',
+        icon: 'tabler:file-check',
+      },
+      {
+        title: 'Continuous Diligence',
+        description: 'Ongoing portfolio monitoring and strategic intelligence. Stay ahead of market shifts, competitive moves, and emerging risks.',
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Portfolio Company Support',
+        description: 'Deploy Impossible Teams to accelerate growth: marketing intelligence, competitive research, strategic planning, and operational support.',
         icon: 'tabler:rocket',
       },
+    ]}
+  />
+
+  <!-- The Technology -->
+  <Steps
+    id="technology"
+    title="What Makes Dynamis Different"
+    subtitle="The architecture behind enterprise-grade multi-agent orchestration"
+    items={[
       {
-        title: 'The Better Human Hypothesis',
-        description:
-          'We do not believe in replacing human judgment. We believe in amplifying it. Organizations that embrace human-centric AI will outperform those that do not.',
-        icon: 'tabler:heart-handshake',
+        title: 'Persistent Institutional Memory',
+        description: 'Intelligence developed in Phase 1 is available to every agent in every subsequent phase. No context lost, no insights forgotten.',
+        icon: 'tabler:database',
       },
       {
-        title: 'Intelligence That Scales',
-        description:
-          'What works for you strengthens our platform for everyone. Insights from your solution power the next venture. This creates a virtuous cycle of capability and value.',
-        icon: 'tabler:chart-line',
+        title: 'Multi-Model Orchestration',
+        description: 'The best model for each specific task is selected dynamically, producing strategy more robust than any single model could generate.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Arbiters for Accuracy',
+        description: 'Claim-challenging fact-check agents ensure research is accurate, not just confident. Every insight is validated before delivery.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Human-in-the-Loop',
+        description: 'Designed for collaboration at every stage. Your judgment and direction shape the output rather than being replaced by it.',
+        icon: 'tabler:user-check',
+      },
+    ]}
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    id="contact"
+    title="Ready to Transform Your Due Diligence Process?"
+    subtitle="Schedule a demonstration tailored to your firm and deal flow."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Schedule Demo',
+        href: 'mailto:demo@omnova.ai',
+        icon: 'tabler:calendar',
       },
     ]}
   />
