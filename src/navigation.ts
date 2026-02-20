@@ -3,10 +3,27 @@ import { getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'How It Works',
-      href: getPermalink('/#features'),
+      text: 'Platform',
+      href: getPermalink('/#platform'),
+    },
+    {
+      text: 'Services',
+      href: getPermalink('/#services'),
+    },
+    {
+      text: 'Technology',
+      href: getPermalink('/#technology'),
     },
   ],
+  actions: [
+    {
+      text: 'Schedule Demo',
+      href: getPermalink('/#contact'),
+      variant: 'primary',
+    },
+  ],
+  showToggleTheme: false,
+  showRssFeed: false,
 };
 
 export const footerData = {
@@ -16,5 +33,5 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [],
-  footerNote: `© ${new Date().getFullYear()} OmNova. All rights reserved.`,
+  footerNote: `© ${new Date().getFullYear()} OmNova Dynamis. All rights reserved.`,
 };
