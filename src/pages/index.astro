@@ -3,73 +3,97 @@ import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
   title: 'OmNova - Impossible Teams: The Dawn of Permissionless Genius',
-  description: 'Deploy AI agent teams that accomplish jobs no human team could ever do—regardless of budget, headcount, or time.',
+  description: 'Deploy coordinated teams of AI agents that accomplish jobs no human team could ever do—regardless of budget, headcount, or time.',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Section -->
-  <section class="bg-white py-20 md:py-32">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <!-- SECTION 1: HERO (Bold Design - Agent Coordination Viz) -->
+  <section class="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 py-32 md:py-40 overflow-hidden">
+    <!-- Background pattern/animation placeholder -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+    </div>
+    
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          Impossible Teams.<br />
-          The Dawn of Permissionless Genius.
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
+          Impossible Teams.
+          <br />
+          <span class="text-secondary-400">The Dawn of Permissionless Genius.</span>
         </h1>
-        <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto mb-10">
-          Deploy <span class="font-semibold text-primary-600">coordinated teams of AI agents</span> that perform jobs 
-          no human team could ever accomplish—<span class="font-semibold">simultaneously analyzing 15,000 companies, 
-          reading 100,000 documents, or monitoring 195 jurisdictions in 50 languages</span>—all before your morning 
-          coffee gets cold.
+        <p class="text-xl md:text-2xl text-white/90 max-w-5xl mx-auto mb-12 leading-relaxed">
+          Deploy coordinated teams of AI agents that perform jobs no human team could ever accomplish—<span class="font-semibold text-secondary-300">simultaneously analyzing 15,000 companies, reading 100,000 documents, monitoring 195 jurisdictions in 50 languages, or testing ideas with 10,000 synthetic customer personas</span>—all before your morning coffee gets cold.
         </p>
         
         <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <a href="#contact" class="btn-primary inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <a href="#contact" class="inline-flex items-center justify-center px-10 py-5 text-lg font-bold rounded-full bg-secondary-500 text-white hover:bg-secondary-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
             Experience Impossible Teams
           </a>
-          <a href="#platform" class="btn-secondary inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full">
-            Learn More
+          <a href="#learn" class="inline-flex items-center justify-center px-10 py-5 text-lg font-bold rounded-full bg-white/10 backdrop-blur text-white hover:bg-white/20 transition border-2 border-white/30">
+            Read the White Paper
           </a>
         </div>
 
         <!-- Trust Indicators -->
-        <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
-          <div class="flex items-center gap-2">
-            <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
-            <span>Permissionless leverage for PE/VC</span>
+        <div class="flex flex-wrap justify-center gap-8 text-base text-white/80">
+          <div class="flex items-center gap-3">
+            <span class="inline-block h-2 w-2 rounded-full bg-secondary-400"></span>
+            <span>Intelligent labor that scales like software</span>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
-            <span>Intelligence that scales like software</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
+          <div class="flex items-center gap-3">
+            <span class="inline-block h-2 w-2 rounded-full bg-secondary-400"></span>
             <span>Jobs humans can't do—at any scale</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="inline-block h-2 w-2 rounded-full bg-secondary-400"></span>
+            <span>The constraint is imagination, not resources</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Problem Statement: The Human Ceiling -->
-  <section id="problem" class="bg-gray-50 py-20">
+  <!-- SECTION 2: END OF PERMISSIONED LEVERAGE (Bold Design - Full Width Manifesto) -->
+  <section class="relative bg-gray-900 text-white py-32 md:py-40">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary-900/50 to-transparent"></div>
+    
+    <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+        For Centuries,<br />Ambitious Work Required Permission
+      </h2>
+      <div class="w-24 h-1 bg-secondary-500 mx-auto mb-12"></div>
+      <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+        <span class="text-white font-semibold">Capital. Labor. Time.</span> These were the gatekeepers of ambition. Only those with access to all three could pursue truly ambitious goals.
+      </p>
+      <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+        The Internet gave us permissionless code and media—write once, distribute infinitely. But code couldn't <em>think</em>. It couldn't <em>reason</em>. It couldn't <em>decide</em>.
+      </p>
+      <p class="text-xl md:text-2xl text-secondary-300 font-semibold leading-relaxed">
+        Now, AI agents give us something new: <span class="text-white">permissionless genius</span>—intelligent labor that scales like software.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 3: THE HUMAN CEILING (Clean Cards - 5 Constraints) -->
+  <section id="learn" class="bg-white py-20 md:py-28">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Breaking Through the Human Ceiling
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          The Human Ceiling
         </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          For centuries, ambitious work required capital, labor, and time. That era is ending.
+        <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+          These aren't flaws—they're the nature of being human. But they create a ceiling on what any organization can accomplish, regardless of resources.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Limitation 1 -->
-        <div class="bg-white p-8 rounded-lg shadow-sm text-center">
-          <div class="text-primary-400 mb-4 flex justify-center">
-            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Constraint 1 -->
+        <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+          <div class="text-primary-500 mb-4 flex justify-center">
+            <svg class="w-14 h-14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
@@ -79,23 +103,23 @@ const metadata = {
           </p>
         </div>
 
-        <!-- Limitation 2 -->
-        <div class="bg-white p-8 rounded-lg shadow-sm text-center">
-          <div class="text-primary-400 mb-4 flex justify-center">
-            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"></path>
+        <!-- Constraint 2 -->
+        <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+          <div class="text-primary-500 mb-4 flex justify-center">
+            <svg class="w-14 h-14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
             </svg>
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-3">Coordination Complexity</h3>
           <p class="text-gray-600">
-            A team of 100 has 4,950 communication channels. Most organizational effort goes to coordination, not production.
+            A team of 100 has 4,950 potential communication channels. Most organizational effort goes to coordination, not production.
           </p>
         </div>
 
-        <!-- Limitation 3 -->
-        <div class="bg-white p-8 rounded-lg shadow-sm text-center">
-          <div class="text-primary-400 mb-4 flex justify-center">
-            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Constraint 3 -->
+        <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+          <div class="text-primary-500 mb-4 flex justify-center">
+            <svg class="w-14 h-14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
@@ -104,145 +128,446 @@ const metadata = {
             Humans sleep, take vacations, and focus intensely for maybe 4-6 hours before quality degrades. Time is the ultimate bottleneck.
           </p>
         </div>
+
+        <!-- Constraint 4 -->
+        <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+          <div class="text-primary-500 mb-4 flex justify-center">
+            <svg class="w-14 h-14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Expertise Silos</h3>
+          <p class="text-gray-600">
+            Assembling cross-domain expert teams takes months and costs millions. Getting lawyer + accountant + researcher + analyst to collaborate requires massive overhead.
+          </p>
+        </div>
+
+        <!-- Constraint 5 -->
+        <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+          <div class="text-primary-500 mb-4 flex justify-center">
+            <svg class="w-14 h-14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Attention Trade-offs</h3>
+          <p class="text-gray-600">
+            Every hour spent monitoring competitors is an hour not spent analyzing customers. Human attention is zero-sum. Critical signals get missed.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- What Makes Teams "Impossible" -->
-  <section id="platform" class="bg-white py-20">
+  <!-- SECTION 4: WHAT MAKES TEAMS IMPOSSIBLE (Clean Cards - Varied Hierarchy) -->
+  <section class="bg-gradient-to-b from-gray-50 to-white py-20 md:py-28">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           What Makes Teams "Impossible"
         </h2>
+        <p class="text-xl md:text-2xl text-primary-600 font-semibold max-w-3xl mx-auto mb-4">
+          These aren't faster humans.
+        </p>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          These aren't faster humans. They accomplish jobs that were structurally impossible before.
+          They accomplish jobs that were structurally impossible before.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Capability 1 -->
-        <div class="bg-gray-50 p-8 rounded-lg text-center">
-          <div class="text-secondary-500 mb-4 flex justify-center">
-            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Capability 1 - Featured -->
+        <div class="bg-primary-600 text-white p-10 rounded-xl shadow-lg hover:shadow-2xl transition lg:col-span-2">
+          <div class="mb-4">
+            <svg class="w-16 h-16 text-secondary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
           </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-3">Infinite Parallel Processing</h3>
-          <p class="text-gray-600">
-            Deploy 200+ specialized agents simultaneously. Analyze entire markets, not samples. Monitor everything, not what you can afford to watch.
+          <h3 class="text-3xl font-bold mb-4">Impossible Scale</h3>
+          <p class="text-xl text-white/90 leading-relaxed">
+            Deploy 500 agents analyzing 15,000 companies simultaneously. Not samples. Not summaries. Complete coverage. Analyze entire markets, not what you can afford to watch.
           </p>
         </div>
 
         <!-- Capability 2 -->
-        <div class="bg-gray-50 p-8 rounded-lg text-center">
+        <div class="bg-white border-2 border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
           <div class="text-secondary-500 mb-4 flex justify-center">
             <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
             </svg>
           </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-3">Zero Coordination Overhead</h3>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Impossible Coordination</h3>
           <p class="text-gray-600">
-            No meetings. No politics. No cultural friction. Agents share context instantly. Perfect collaboration at infinite scale.
+            Dozens of specialized agents in perfect sync. No meetings. No politics. No cultural friction. Agents share context instantly.
           </p>
         </div>
 
         <!-- Capability 3 -->
-        <div class="bg-gray-50 p-8 rounded-lg text-center">
+        <div class="bg-white border-2 border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
           <div class="text-secondary-500 mb-4 flex justify-center">
             <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
             </svg>
           </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-3">Permissionless Leverage</h3>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Impossible Attention</h3>
           <p class="text-gray-600">
-            No hiring. No training. No waiting for budget approval. Genius-level intelligence becomes an abundant, on-demand resource.
+            No trade-offs. No blind spots. Monitor competitors AND customers AND regulations AND markets—all simultaneously, all the time.
+          </p>
+        </div>
+
+        <!-- Capability 4 -->
+        <div class="bg-white border-2 border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+          <div class="text-secondary-500 mb-4 flex justify-center">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Impossible Expertise</h3>
+          <p class="text-gray-600">
+            Dynamically assemble cross-domain expert teams in seconds, not months. Legal + financial + technical + strategic—all working in sync.
+          </p>
+        </div>
+
+        <!-- Capability 5 -->
+        <div class="bg-white border-2 border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+          <div class="text-secondary-500 mb-4 flex justify-center">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Impossible Exploration</h3>
+          <p class="text-gray-600">
+            No career risk bias. Unconventional strategies and contrarian positions get explored fully. Truth over politics.
+          </p>
+        </div>
+
+        <!-- Capability 6 -->
+        <div class="bg-white border-2 border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+          <div class="text-secondary-500 mb-4 flex justify-center">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Impossible Memory</h3>
+          <p class="text-gray-600">
+            Knowledge compounds rather than dissipates. Never retires. Never takes a job with a competitor. Gets smarter the more you use it.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Use Cases -->
-  <section class="bg-gray-50 py-20">
+  <!-- SECTION 5: TAXONOMY OF IMPOSSIBLE JOBS (Bold Design - Visual Storytelling) -->
+  <section class="bg-gray-900 text-white py-20 md:py-32">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Jobs That Were Never Possible Before
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          A Taxonomy of Impossible Jobs
         </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Built for private equity, venture capital, and strategic intelligence
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Two categories: jobs that were too expensive, and jobs that were never possible at all.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <!-- Use Case 1 -->
-        <div class="bg-white p-8 rounded-lg shadow-sm">
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Comprehensive Market Intelligence</h3>
-          <p class="text-gray-600 mb-4">
-            Analyze every competitor, supplier, customer, and regulatory shift across 195 jurisdictions—continuously, not quarterly.
-          </p>
-          <ul class="text-sm text-gray-500 space-y-2">
-            <li>• Monitor 15,000+ companies simultaneously</li>
-            <li>• Track regulatory changes in real-time</li>
-            <li>• Identify emerging risks before they surface</li>
-          </ul>
+      <!-- Category 1: Too Expensive -->
+      <div class="mb-20">
+        <div class="inline-block bg-secondary-500/20 border border-secondary-500 rounded-full px-6 py-2 mb-8">
+          <span class="text-secondary-400 font-bold uppercase tracking-wide text-sm">Jobs That Were Too Expensive</span>
         </div>
 
-        <!-- Use Case 2 -->
-        <div class="bg-white p-8 rounded-lg shadow-sm">
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Due Diligence at Impossible Speed</h3>
-          <p class="text-gray-600 mb-4">
-            Deliver Big 4-level depth in 48 hours. Analyze brand perception, competitive landscape, operational risks, and market positioning—all in parallel.
-          </p>
-          <ul class="text-sm text-gray-500 space-y-2">
-            <li>• 100,000+ documents analyzed</li>
-            <li>• Comprehensive across all dimensions</li>
-            <li>• Fraction of consulting costs</li>
-          </ul>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Job 1 -->
+          <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl hover:border-secondary-500 transition">
+            <h3 class="text-2xl font-bold mb-4 text-white">Complete Due Diligence at Scale</h3>
+            <div class="mb-6">
+              <div class="flex items-baseline gap-4 mb-2">
+                <span class="text-gray-500 line-through">Review 1% of documents</span>
+                <span class="text-secondary-400 font-bold">→ Review 100%</span>
+              </div>
+              <div class="flex items-baseline gap-4">
+                <span class="text-gray-500 line-through">4-8 weeks</span>
+                <span class="text-secondary-400 font-bold">→ 48 hours</span>
+              </div>
+            </div>
+            <p class="text-gray-300 leading-relaxed">
+              Deploy 200+ specialized agents to deliver Big 4-level depth across brand, market, competitive landscape, and operational risks—giving PE and VC firms comprehensive intelligence at a fraction of traditional consulting costs.
+            </p>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl hover:border-secondary-500 transition">
+            <h3 class="text-2xl font-bold mb-4 text-white">Continuous Competitive Intelligence</h3>
+            <div class="mb-6">
+              <div class="flex items-baseline gap-4 mb-2">
+                <span class="text-gray-500 line-through">Quarterly reports</span>
+                <span class="text-secondary-400 font-bold">→ 24/7 monitoring</span>
+              </div>
+              <div class="flex items-baseline gap-4">
+                <span class="text-gray-500 line-through">Sample of competitors</span>
+                <span class="text-secondary-400 font-bold">→ Entire ecosystem</span>
+              </div>
+            </div>
+            <p class="text-gray-300 leading-relaxed">
+              Monitor 15,000+ companies, track regulatory changes across 195 jurisdictions in 50 languages, and identify emerging risks before they surface. Never miss a market shift or competitive move.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2: Never Possible -->
+      <div>
+        <div class="inline-block bg-primary-500/20 border border-primary-400 rounded-full px-6 py-2 mb-8">
+          <span class="text-primary-300 font-bold uppercase tracking-wide text-sm">Jobs That Were Never Possible</span>
         </div>
 
-        <!-- Use Case 3 -->
-        <div class="bg-white p-8 rounded-lg shadow-sm">
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Continuous Portfolio Monitoring</h3>
-          <p class="text-gray-600 mb-4">
-            Never miss a market shift, competitive move, or emerging risk. Your portfolio companies get 24/7 strategic intelligence without adding headcount.
-          </p>
-          <ul class="text-sm text-gray-500 space-y-2">
-            <li>• Real-time competitive tracking</li>
-            <li>• Automated risk detection</li>
-            <li>• Strategic opportunity alerts</li>
-          </ul>
-        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Job 3 -->
+          <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl hover:border-primary-400 transition">
+            <h3 class="text-2xl font-bold mb-4 text-white">Hyperlocal Marketing at National Scale</h3>
+            <div class="mb-6">
+              <span class="inline-block bg-primary-500/20 text-primary-300 px-3 py-1 rounded-full text-sm font-semibold">
+                STRUCTURALLY IMPOSSIBLE FOR HUMANS
+              </span>
+            </div>
+            <p class="text-gray-300 leading-relaxed mb-4">
+              Run thousands of localized campaigns simultaneously—each tailored to specific neighborhood demographics, local events, regional preferences, and cultural nuances.
+            </p>
+            <p class="text-gray-400 text-sm italic">
+              No human team could coordinate this level of localization across a national footprint. The coordination complexity alone would consume any organization.
+            </p>
+          </div>
 
-        <!-- Use Case 4 -->
-        <div class="bg-white p-8 rounded-lg shadow-sm">
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Strategic Scenario Planning</h3>
-          <p class="text-gray-600 mb-4">
-            Test 10,000 synthetic customer personas. Model hundreds of market scenarios. Explore the possibility space that human teams can't reach.
-          </p>
-          <ul class="text-sm text-gray-500 space-y-2">
-            <li>• Unlimited iteration capacity</li>
-            <li>• Comprehensive scenario modeling</li>
-            <li>• Zero political bias</li>
-          </ul>
+          <!-- Job 4 -->
+          <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl hover:border-primary-400 transition">
+            <h3 class="text-2xl font-bold mb-4 text-white">Transaction-Level Compliance</h3>
+            <div class="mb-6">
+              <div class="flex items-baseline gap-4 mb-2">
+                <span class="text-gray-500 line-through">Audit 1-5% sample</span>
+                <span class="text-primary-300 font-bold">→ Audit 100%</span>
+              </div>
+            </div>
+            <p class="text-gray-300 leading-relaxed mb-4">
+              Review every transaction, not statistical samples. Identify patterns and anomalies that only appear when you see the complete picture.
+            </p>
+            <p class="text-gray-400 text-sm italic">
+              The math doesn't work for humans. A company processing 1M transactions/month would need thousands of analysts just to review them—before investigating findings.
+            </p>
+          </div>
+
+          <!-- Job 5 -->
+          <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl hover:border-primary-400 transition md:col-span-2">
+            <h3 class="text-2xl font-bold mb-4 text-white">Counterparty Risk Constellation Mapping</h3>
+            <div class="mb-6">
+              <span class="inline-block bg-primary-500/20 text-primary-300 px-3 py-1 rounded-full text-sm font-semibold">
+                STRUCTURALLY IMPOSSIBLE FOR HUMANS
+              </span>
+            </div>
+            <p class="text-gray-300 leading-relaxed mb-4">
+              Map exposure across 4+ degrees of separation. Your customer's supplier's supplier's supplier just got sanctioned—how does that affect you? Traditional risk teams can barely manage 1-2 degrees.
+            </p>
+            <p class="text-gray-400 text-sm italic">
+              The combinatorial explosion makes this impossible at human scale. A network of 10,000 entities with average 50 connections each = billions of potential paths to analyze.
+            </p>
+          </div>
+
+          <!-- Job 6 -->
+          <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl hover:border-primary-400 transition md:col-span-2">
+            <h3 class="text-2xl font-bold mb-4 text-white">Strategic Scenario Planning with 10,000 Synthetic Personas</h3>
+            <div class="mb-6">
+              <span class="inline-block bg-primary-500/20 text-primary-300 px-3 py-1 rounded-full text-sm font-semibold">
+                STRUCTURALLY IMPOSSIBLE FOR HUMANS
+              </span>
+            </div>
+            <p class="text-gray-300 leading-relaxed mb-4">
+              Test business strategies against thousands of synthetic customer personas with diverse demographics, psychographics, and behavioral patterns. Model hundreds of market scenarios in parallel.
+            </p>
+            <p class="text-gray-400 text-sm italic">
+              Human focus groups cap at 10-20 people. Market research surveys at a few thousand. Neither captures the full possibility space or explores unconventional scenarios without bias.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section id="contact" class="bg-primary-400 py-20">
-    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-        Ready to Deploy Your Impossible Team?
+  <!-- SECTION 6: LEADER OF IMPOSSIBLE TEAMS (Story-Driven) -->
+  <section class="bg-white py-20 md:py-28">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          A New Role for a New Era:<br />
+          <span class="text-primary-600">Leader of Impossible Teams</span>
+        </h2>
+        <p class="text-2xl text-gray-600 italic">
+          "Think of this role as conducting symphonies that no orchestra could ever play."
+        </p>
+      </div>
+
+      <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
+        <p class="text-xl">
+          Impossible Teams aren't replacing people—they're doing jobs that weren't getting done at all. Jobs that were dismissed as impractical. Jobs that never made it past the "nice to have" list. Jobs that required imagination you couldn't afford to act on.
+        </p>
+
+        <p class="text-xl">
+          Leading them requires a new mindset. You don't manage these teams the way you manage humans. You <strong>define missions</strong>. You <strong>set constraints</strong>. You <strong>recognize patterns</strong> in their output. You <strong>maintain strategic direction</strong> while they handle execution at a scale no human team could match.
+        </p>
+
+        <div class="bg-gradient-to-br from-primary-50 to-secondary-50 border-l-4 border-primary-500 p-8 rounded-r-xl my-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">The Impossible Coaching Team</h3>
+          <p class="text-lg text-gray-700">
+            You don't just get the agents—you get <strong>AI organizational experts</strong> who help you transition to this new way of working. Think of them as your personal coaches for leading at impossible scale. They help you:
+          </p>
+          <ul class="mt-4 space-y-2 text-gray-700">
+            <li>• Identify which "impossible" jobs are ready to become possible</li>
+            <li>• Structure missions and constraints for optimal team performance</li>
+            <li>• Interpret patterns and insights from agent output</li>
+            <li>• Evolve your leadership approach as capabilities expand</li>
+          </ul>
+        </div>
+
+        <p class="text-xl">
+          This is your competitive advantage. While others are still thinking in terms of headcount and budgets, you're thinking in terms of <strong>what jobs are worth doing</strong>—not what jobs you can afford.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: THE DYNAMIS DIFFERENCE (Brief, Clean) -->
+  <section class="bg-gray-50 py-20">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          The Dynamis Difference
+        </h2>
+        <p class="text-xl text-gray-600">
+          What makes OmNova's platform the industry's most advanced self-organizing multi-agent system
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-2">Cognitive Diversity</h3>
+          <p class="text-gray-600 text-sm">Agents with genuinely different reasoning approaches, not clones</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-2">Critical Analysis</h3>
+          <p class="text-gray-600 text-sm">Agents challenge and verify each other's work before you see it</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-2">Team-of-Teams Orchestration</h3>
+          <p class="text-gray-600 text-sm">Orchestrator of orchestrators, not just agent swarms</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-2">Shared Institutional Memory</h3>
+          <p class="text-gray-600 text-sm">Gets smarter the more you use it—your "Contextual Moat"</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-2">Human-Above-the-Loop</h3>
+          <p class="text-gray-600 text-sm">You set direction and constraints, teams operate autonomously within them</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-2">Market-Leading Scale</h3>
+          <p class="text-gray-600 text-sm">200+ agents per engagement, coordinated in perfect sync</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: ABUNDANCE MINDSET (Bold Design - Immersive Closer) -->
+  <section class="relative bg-gradient-to-br from-gray-900 via-primary-900 to-gray-900 text-white py-32 md:py-40">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 60px 60px;"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+        From Must-Have<br />to Dream-to-Have
       </h2>
-      <p class="text-xl text-white/90 mb-8">
-        Experience what becomes possible when genius-level intelligence becomes an abundant, on-demand resource.
-      </p>
-      <a href="mailto:demo@omnova.ai" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-secondary-500 text-white hover:bg-secondary-600 transition">
-        Schedule a Demonstration
-      </a>
+      
+      <div class="w-24 h-1 bg-secondary-500 mx-auto mb-12"></div>
+
+      <div class="space-y-8 text-xl md:text-2xl text-gray-300 leading-relaxed">
+        <p>
+          When Impossible Teams handle the <span class="text-white font-semibold">must-have work</span>—compliance, competitive response, operational necessity—capacity is freed for higher pursuits.
+        </p>
+
+        <p>
+          The <span class="text-secondary-400 font-semibold">nice-to-have</span> projects get attention. The <span class="text-secondary-400 font-semibold">dream-to-have</span> transformations become achievable.
+        </p>
+
+        <p>
+          This isn't about efficiency.<br />
+          <span class="text-white font-bold text-3xl md:text-4xl">It's about organizational self-actualization.</span>
+        </p>
+
+        <div class="pt-12">
+          <p class="text-3xl md:text-4xl font-bold text-secondary-400 leading-tight">
+            "The constraint of the future is not resources—it's imagination."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: CTA (3-Step Process) -->
+  <section id="contact" class="bg-white py-20 md:py-28">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          What's Your Impossible Job?
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          What job would transform your organization—if only it were possible? Let's explore whether your impossible job is ready to become possible.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-12 mb-16">
+        <!-- Step 1 -->
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary-100 text-primary-600 rounded-full font-bold text-2xl mb-6">
+            1
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Imagine</h3>
+          <p class="text-gray-600">
+            What job have you always wished you could do but dismissed as impractical? What would you attempt if coordination complexity wasn't a constraint?
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-secondary-100 text-secondary-600 rounded-full font-bold text-2xl mb-6">
+            2
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Calculate</h3>
+          <p class="text-gray-600">
+            What would accomplishing that job be worth? Not what it costs—what it's worth. The strategic value. The competitive advantage. The transformation.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-accent-100 text-accent-600 rounded-full font-bold text-2xl mb-6">
+            3
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Connect</h3>
+          <p class="text-gray-600">
+            Reach out. Let's explore together whether your impossible job is ready to become possible. No pitch. Just a conversation about what could be.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="mailto:demo@omnova.ai" class="inline-flex items-center justify-center px-12 py-5 text-xl font-bold rounded-full bg-primary-600 text-white hover:bg-primary-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+          Schedule a Demonstration
+        </a>
+        <p class="mt-6 text-gray-500">
+          or email us at <a href="mailto:demo@omnova.ai" class="text-primary-600 hover:text-primary-700 font-semibold">demo@omnova.ai</a>
+        </p>
+      </div>
     </div>
   </section>
 </Layout>
