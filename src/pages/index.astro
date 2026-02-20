@@ -6,29 +6,7 @@ const metadata = {
   description: 'Deploy coordinated teams of AI agents that accomplish jobs no human team could ever do—regardless of budget, headcount, or time.',
   ignoreTitleTemplate: true,
 };
-
-// Custom orange color from logo
-const logoOrange = '#E87D3E';
 ---
-
-<style define:vars={{ logoOrange }}>
-  .logo-orange {
-    color: var(--logoOrange);
-  }
-  .bg-logo-orange {
-    background-color: var(--logoOrange);
-  }
-  .border-logo-orange {
-    border-color: var(--logoOrange);
-  }
-  .logo-orange-light {
-    background-color: rgba(232, 125, 62, 0.1);
-  }
-  .logo-orange-badge {
-    background-color: rgba(232, 125, 62, 0.2);
-    border: 1px solid var(--logoOrange);
-  }
-</style>
 
 <Layout metadata={metadata}>
   <!-- SECTION 1: HERO -->
@@ -42,14 +20,14 @@ const logoOrange = '#E87D3E';
         <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
           Impossible Teams.
           <br />
-          <span class="logo-orange">The Dawn of Permissionless Genius.</span>
+          <span class="text-[#E87D3E]">The Dawn of Permissionless Genius.</span>
         </h1>
         <p class="text-xl md:text-2xl text-white/90 max-w-5xl mx-auto mb-12 leading-relaxed">
-          Deploy coordinated teams of AI agents that perform jobs no human team could ever accomplish—<span class="font-semibold logo-orange">simultaneously analyzing 15,000 companies, reading 100,000 documents, monitoring 195 jurisdictions, or testing ideas with 10,000 synthetic personas</span>—all before your morning coffee gets cold.
+          Deploy coordinated teams of AI agents that perform jobs no human team could ever accomplish—<span class="font-semibold text-[#E87D3E]">simultaneously analyzing 15,000 companies, reading 100,000 documents, monitoring 195 jurisdictions, or testing ideas with 10,000 synthetic personas</span>—all before your morning coffee gets cold.
         </p>
         
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <a href="#contact" class="inline-flex items-center justify-center px-10 py-5 text-lg font-bold rounded-full bg-logo-orange text-white hover:opacity-90 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+          <a href="#contact" class="inline-flex items-center justify-center px-10 py-5 text-lg font-bold rounded-full bg-[#E87D3E] text-white hover:bg-[#D16D2E] transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
             What's Your Impossible Job?
           </a>
           <a href="#learn" class="inline-flex items-center justify-center px-10 py-5 text-lg font-bold rounded-full bg-white/10 backdrop-blur text-white hover:bg-white/20 transition border-2 border-white/30">
@@ -59,15 +37,15 @@ const logoOrange = '#E87D3E';
 
         <div class="flex flex-wrap justify-center gap-8 text-base text-white/80">
           <div class="flex items-center gap-3">
-            <span class="inline-block h-2 w-2 rounded-full bg-logo-orange"></span>
+            <span class="inline-block h-2 w-2 rounded-full bg-[#E87D3E]"></span>
             <span>Intelligent labor that scales like software</span>
           </div>
           <div class="flex items-center gap-3">
-            <span class="inline-block h-2 w-2 rounded-full bg-logo-orange"></span>
+            <span class="inline-block h-2 w-2 rounded-full bg-[#E87D3E]"></span>
             <span>Jobs humans can't do—at any scale</span>
           </div>
           <div class="flex items-center gap-3">
-            <span class="inline-block h-2 w-2 rounded-full bg-logo-orange"></span>
+            <span class="inline-block h-2 w-2 rounded-full bg-[#E87D3E]"></span>
             <span>The constraint is imagination, not resources</span>
           </div>
         </div>
@@ -83,14 +61,14 @@ const logoOrange = '#E87D3E';
       <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
         For Centuries,<br />Ambitious Work Required Permission
       </h2>
-      <div class="w-24 h-1 bg-logo-orange mx-auto mb-12"></div>
+      <div class="w-24 h-1 bg-[#E87D3E] mx-auto mb-12"></div>
       <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
         <span class="text-white font-semibold">Capital. Labor. Time.</span> These were the gatekeepers of ambition.
       </p>
       <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
         The Internet gave us permissionless code and media. But code couldn't <em>think</em>. It couldn't <em>reason</em>. It couldn't <em>decide</em>.
       </p>
-      <p class="text-xl md:text-2xl logo-orange font-semibold leading-relaxed">
+      <p class="text-xl md:text-2xl text-[#E87D3E] font-semibold leading-relaxed">
         Now, AI agents give us <span class="text-white">permissionless genius</span>—intelligent labor that scales like software.
       </p>
     </div>
@@ -164,7 +142,7 @@ const logoOrange = '#E87D3E';
         <!-- Featured -->
         <div class="bg-primary-600 text-white p-10 rounded-xl shadow-lg lg:col-span-2">
           <div class="mb-4">
-            <svg class="w-16 h-16 logo-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-16 h-16 text-[#E87D3E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
           </div>
@@ -175,7 +153,7 @@ const logoOrange = '#E87D3E';
         </div>
 
         <div class="bg-white border-2 border-gray-200 p-8 rounded-xl shadow-sm text-center">
-          <div class="logo-orange mb-4 flex justify-center">
+          <div class="text-[#E87D3E] mb-4 flex justify-center">
             <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
             </svg>
@@ -187,7 +165,7 @@ const logoOrange = '#E87D3E';
         </div>
 
         <div class="bg-white border-2 border-gray-200 p-8 rounded-xl shadow-sm text-center">
-          <div class="logo-orange mb-4 flex justify-center">
+          <div class="text-[#E87D3E] mb-4 flex justify-center">
             <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
@@ -200,7 +178,7 @@ const logoOrange = '#E87D3E';
         </div>
 
         <div class="bg-white border-2 border-gray-200 p-8 rounded-xl shadow-sm text-center">
-          <div class="logo-orange mb-4 flex justify-center">
+          <div class="text-[#E87D3E] mb-4 flex justify-center">
             <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
             </svg>
@@ -212,7 +190,7 @@ const logoOrange = '#E87D3E';
         </div>
 
         <div class="bg-white border-2 border-gray-200 p-8 rounded-xl shadow-sm text-center">
-          <div class="logo-orange mb-4 flex justify-center">
+          <div class="text-[#E87D3E] mb-4 flex justify-center">
             <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
             </svg>
@@ -240,8 +218,8 @@ const logoOrange = '#E87D3E';
 
       <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl">
-          <div class="inline-block logo-orange-badge rounded-full px-4 py-1 mb-4">
-            <span class="logo-orange font-bold uppercase tracking-wide text-xs">Too Expensive</span>
+          <div class="inline-block rounded-full px-4 py-1 mb-4 border border-[#E87D3E]" style="background-color: rgba(232, 125, 62, 0.2);">
+            <span class="text-[#E87D3E] font-bold uppercase tracking-wide text-xs">Too Expensive</span>
           </div>
           <h3 class="text-2xl font-bold mb-4">Complete Due Diligence in 48 Hours</h3>
           <p class="text-gray-300 mb-4">
@@ -250,8 +228,8 @@ const logoOrange = '#E87D3E';
         </div>
 
         <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl">
-          <div class="inline-block logo-orange-badge rounded-full px-4 py-1 mb-4">
-            <span class="logo-orange font-bold uppercase tracking-wide text-xs">Too Expensive</span>
+          <div class="inline-block rounded-full px-4 py-1 mb-4 border border-[#E87D3E]" style="background-color: rgba(232, 125, 62, 0.2);">
+            <span class="text-[#E87D3E] font-bold uppercase tracking-wide text-xs">Too Expensive</span>
           </div>
           <h3 class="text-2xl font-bold mb-4">24/7 Market Intelligence</h3>
           <p class="text-gray-300 mb-4">
@@ -303,7 +281,7 @@ const logoOrange = '#E87D3E';
           Leading them requires a new mindset. You <strong>define missions</strong>. You <strong>set constraints</strong>. You <strong>maintain strategic direction</strong> while they handle execution at impossible scale.
         </p>
 
-        <div class="bg-gradient-to-br from-primary-50 to-orange-50 p-8 rounded-r-xl my-8 border-l-4 border-logo-orange">
+        <div class="bg-gradient-to-br from-primary-50 to-orange-50 p-8 rounded-r-xl my-8 border-l-4 border-[#E87D3E]">
           <h3 class="text-2xl font-bold text-gray-900 mb-4">The Impossible Coaching Team</h3>
           <p class="text-lg text-gray-700">
             You don't just get the agents—you get AI organizational experts who help you transition to this new way of working. They help you identify which impossible jobs are ready to become possible.
@@ -328,7 +306,7 @@ const logoOrange = '#E87D3E';
         From Must-Have<br />to Dream-to-Have
       </h2>
       
-      <div class="w-24 h-1 bg-logo-orange mx-auto mb-12"></div>
+      <div class="w-24 h-1 bg-[#E87D3E] mx-auto mb-12"></div>
 
       <div class="space-y-8 text-xl md:text-2xl text-gray-300 leading-relaxed">
         <p>
@@ -341,7 +319,7 @@ const logoOrange = '#E87D3E';
         </p>
 
         <div class="pt-12">
-          <p class="text-3xl md:text-4xl font-bold logo-orange leading-tight">
+          <p class="text-3xl md:text-4xl font-bold text-[#E87D3E] leading-tight">
             "The constraint of the future is not resources—it's imagination."
           </p>
         </div>
@@ -373,7 +351,7 @@ const logoOrange = '#E87D3E';
         </div>
 
         <div class="text-center">
-          <div class="inline-flex items-center justify-center w-16 h-16 logo-orange-light logo-orange rounded-full font-bold text-2xl mb-6">
+          <div class="inline-flex items-center justify-center w-16 h-16 text-[#E87D3E] rounded-full font-bold text-2xl mb-6" style="background-color: rgba(232, 125, 62, 0.1);">
             2
           </div>
           <h3 class="text-2xl font-bold text-gray-900 mb-3">Calculate</h3>
@@ -394,11 +372,11 @@ const logoOrange = '#E87D3E';
       </div>
 
       <div class="text-center">
-        <a href="mailto:demo@omnova.ai" class="inline-flex items-center justify-center px-12 py-5 text-xl font-bold rounded-full bg-logo-orange text-white hover:opacity-90 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+        <a href="mailto:demo@omnova.ai" class="inline-flex items-center justify-center px-12 py-5 text-xl font-bold rounded-full bg-[#E87D3E] text-white hover:bg-[#D16D2E] transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
           Schedule a Demonstration
         </a>
         <p class="mt-6 text-gray-500">
-          or email us at <a href="mailto:demo@omnova.ai" class="logo-orange font-semibold hover:underline">demo@omnova.ai</a>
+          or email us at <a href="mailto:demo@omnova.ai" class="text-[#E87D3E] hover:text-[#D16D2E] font-semibold hover:underline">demo@omnova.ai</a>
         </p>
       </div>
     </div>
