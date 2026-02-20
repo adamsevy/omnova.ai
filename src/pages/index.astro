@@ -1,191 +1,182 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'OmNova Dynamis - Due Diligence at Machine Speed',
-  description: 'Enterprise-grade due diligence powered by coordinated teams of 200+ AI agents. Comprehensive intelligence in 48 hours for PE and VC firms.',
+  description: 'Enterprise-grade due diligence powered by coordinated teams of 200+ AI agents.',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
-  <Hero
-    id="hero"
-    title="Due Diligence at Machine Speed. Strategic Intelligence at Human Depth."
-    tagline="OmNova Dynamis"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Schedule Demo',
-        href: '#contact',
-        icon: 'tabler:calendar',
-      },
-      {
-        variant: 'secondary',
-        text: 'View Platform',
-        href: '#platform',
-        icon: 'tabler:arrow-right',
-      },
-    ]}
-  >
-    <Fragment slot="subtitle">
-      <span class="text-lg md:text-xl text-gray-600 dark:text-gray-300">
-        Deploy coordinated teams of <span class="font-semibold text-primary">200+ specialized AI agents</span> to deliver 
-        comprehensive due diligence in <span class="font-semibold">48 hours</span> — giving PE and VC firms the depth 
-        of a Big 4 engagement at a fraction of the time and cost.
-      </span>
-    </Fragment>
+  <section class="bg-white py-20 md:py-32">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <p class="text-sm font-semibold uppercase tracking-wide text-primary-400 mb-4">
+          OmNova Dynamis
+        </p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          Due Diligence at Machine Speed.<br />
+          Strategic Intelligence at Human Depth.
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto mb-10">
+          Deploy coordinated teams of <span class="font-semibold text-primary-600">200+ specialized AI agents</span> to deliver 
+          comprehensive due diligence in <span class="font-semibold">48 hours</span> — giving PE and VC firms the depth 
+          of a Big 4 engagement at a fraction of the time and cost.
+        </p>
+        
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a href="#contact" class="btn-primary inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full">
+            Schedule Demo
+          </a>
+          <a href="#platform" class="btn-secondary inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full">
+            View Platform
+          </a>
+        </div>
 
-    <Fragment slot="content">
-      <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
-        <div class="flex items-center gap-2">
-          <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
-          <span>Trusted by leading PE/VC firms</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
-          <span>Enterprise-grade orchestration</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
-          <span>200+ agents per engagement</span>
+        <!-- Trust Indicators -->
+        <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+          <div class="flex items-center gap-2">
+            <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
+            <span>Trusted by leading PE/VC firms</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
+            <span>Enterprise-grade orchestration</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="inline-block h-2 w-2 rounded-full bg-green-500"></span>
+            <span>200+ agents per engagement</span>
+          </div>
         </div>
       </div>
-    </Fragment>
-  </Hero>
+    </div>
+  </section>
 
   <!-- Problem Statement -->
-  <Features
-    id="problem"
-    title="Traditional Due Diligence Is Broken"
-    subtitle="PE and VC firms face an impossible tradeoff: speed vs. depth. Until now."
-    columns={3}
-    items={[
-      {
-        title: 'Too Slow',
-        description: 'Traditional DD takes 4-8 weeks. Markets move faster. Deals are lost waiting for analysis.',
-        icon: 'tabler:clock-x',
-      },
-      {
-        title: 'Too Expensive',
-        description: 'Big 4 consulting engagements cost $150K-$500K per deal. This limits how deep you can go.',
-        icon: 'tabler:currency-dollar-off',
-      },
-      {
-        title: 'Too Shallow',
-        description: 'Rushing the process means missing critical risks. Surface-level analysis leads to bad bets.',
-        icon: 'tabler:file-search',
-      },
-    ]}
-  />
+  <section id="problem" class="bg-gray-50 py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Traditional Due Diligence Is Broken
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          PE and VC firms face an impossible tradeoff: speed vs. depth. Until now.
+        </p>
+      </div>
 
-  <!-- The Dynamis Solution -->
-  <Features3
-    id="platform"
-    title="The Dynamis Impossible Teams Solution"
-    subtitle="Five coordinated phases. Hundreds of specialized agents. Enterprise-grade intelligence at machine speed."
-    columns={3}
-    items={[
-      {
-        title: 'Phase 1: Brand & Market Intelligence',
-        description: 'Deep research on brand positioning, consumer perceptions, competitive landscape, and market dynamics. Produces a comprehensive Brand Graph.',
-        icon: 'tabler:chart-bar',
-      },
-      {
-        title: 'Phase 2: Strategy Council',
-        description: 'Multi-agent strategy ensemble synthesizes research into campaign briefs with message architecture and channel direction.',
-        icon: 'tabler:users-group',
-      },
-      {
-        title: 'Phase 3: Creative Direction',
-        description: 'Audience-grounded creative briefs and execution frameworks optimized for every relevant channel.',
-        icon: 'tabler:bulb',
-      },
-      {
-        title: 'Phase 4: Cohort Testing',
-        description: 'AI persona agents representing your target audience test every message before launch with honest, actionable feedback.',
-        icon: 'tabler:target',
-      },
-      {
-        title: 'Phase 5: Continuous Monitoring',
-        description: 'Real-time market monitoring, sentiment tracking, and competitive intelligence feeding recursive improvement.',
-        icon: 'tabler:refresh',
-      },
-    ]}
-  />
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Problem 1 -->
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="text-primary-400 mb-4">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Too Slow</h3>
+          <p class="text-gray-600">
+            Traditional DD takes 4-8 weeks. Markets move faster. Deals are lost waiting for analysis.
+          </p>
+        </div>
 
-  <!-- Primary Services -->
-  <Features
-    id="services"
-    title="Our Core Services"
-    subtitle="Purpose-built for private equity and venture capital"
-    columns={3}
-    items={[
-      {
-        title: 'Due Diligence',
-        description: 'Comprehensive pre-acquisition intelligence across brand, market, competitive landscape, and operational risks. 48-hour turnaround.',
-        icon: 'tabler:file-check',
-      },
-      {
-        title: 'Continuous Diligence',
-        description: 'Ongoing portfolio monitoring and strategic intelligence. Stay ahead of market shifts, competitive moves, and emerging risks.',
-        icon: 'tabler:repeat',
-      },
-      {
-        title: 'Portfolio Company Support',
-        description: 'Deploy Impossible Teams to accelerate growth: marketing intelligence, competitive research, strategic planning, and operational support.',
-        icon: 'tabler:rocket',
-      },
-    ]}
-  />
+        <!-- Problem 2 -->
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="text-primary-400 mb-4">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Too Expensive</h3>
+          <p class="text-gray-600">
+            Big 4 consulting engagements cost $150K-$500K per deal. This limits how deep you can go.
+          </p>
+        </div>
 
-  <!-- The Technology -->
-  <Steps
-    id="technology"
-    title="What Makes Dynamis Different"
-    subtitle="The architecture behind enterprise-grade multi-agent orchestration"
-    items={[
-      {
-        title: 'Persistent Institutional Memory',
-        description: 'Intelligence developed in Phase 1 is available to every agent in every subsequent phase. No context lost, no insights forgotten.',
-        icon: 'tabler:database',
-      },
-      {
-        title: 'Multi-Model Orchestration',
-        description: 'The best model for each specific task is selected dynamically, producing strategy more robust than any single model could generate.',
-        icon: 'tabler:cpu',
-      },
-      {
-        title: 'Arbiters for Accuracy',
-        description: 'Claim-challenging fact-check agents ensure research is accurate, not just confident. Every insight is validated before delivery.',
-        icon: 'tabler:shield-check',
-      },
-      {
-        title: 'Human-in-the-Loop',
-        description: 'Designed for collaboration at every stage. Your judgment and direction shape the output rather than being replaced by it.',
-        icon: 'tabler:user-check',
-      },
-    ]}
-  />
+        <!-- Problem 3 -->
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="text-primary-400 mb-4">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Too Shallow</h3>
+          <p class="text-gray-600">
+            Rushing the process means missing critical risks. Surface-level analysis leads to bad bets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- CTA -->
-  <CallToAction
-    id="contact"
-    title="Ready to Transform Your Due Diligence Process?"
-    subtitle="Schedule a demonstration tailored to your firm and deal flow."
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Schedule Demo',
-        href: 'mailto:demo@omnova.ai',
-        icon: 'tabler:calendar',
-      },
-    ]}
-  />
+  <!-- Services Section -->
+  <section id="platform" class="bg-white py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Our Core Services
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Purpose-built for private equity and venture capital
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-gray-50 p-8 rounded-lg">
+          <div class="text-secondary-500 mb-4">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Due Diligence</h3>
+          <p class="text-gray-600">
+            Comprehensive pre-acquisition intelligence across brand, market, competitive landscape, and operational risks. 48-hour turnaround.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-gray-50 p-8 rounded-lg">
+          <div class="text-secondary-500 mb-4">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Continuous Diligence</h3>
+          <p class="text-gray-600">
+            Ongoing portfolio monitoring and strategic intelligence. Stay ahead of market shifts, competitive moves, and emerging risks.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-gray-50 p-8 rounded-lg">
+          <div class="text-secondary-500 mb-4">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Portfolio Company Support</h3>
+          <p class="text-gray-600">
+            Deploy Impossible Teams to accelerate growth: marketing intelligence, competitive research, strategic planning, and operational support.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="contact" class="bg-primary-400 py-20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Ready to Transform Your Due Diligence Process?
+      </h2>
+      <p class="text-xl text-white/90 mb-8">
+        Schedule a demonstration tailored to your firm and deal flow.
+      </p>
+      <a href="mailto:demo@omnova.ai" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-secondary-500 text-white hover:bg-secondary-600 transition">
+        Schedule Demo
+      </a>
+    </div>
+  </section>
 </Layout>
