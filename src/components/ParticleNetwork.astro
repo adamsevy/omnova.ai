@@ -14,6 +14,22 @@
       this.particleCount = 80;
       this.mouse = { x: null, y: null };
       
+      // Impossible Teams terms
+      this.agentTerms = [
+        "Analyzing...",
+        "Coordinating...",
+        "Synthesizing...",
+        "Monitoring...",
+        "Optimizing...",
+        "Reasoning...",
+        "Discovering...",
+        "Collaborating...",
+        "Processing...",
+        "Learning...",
+        "Exploring...",
+        "Adapting..."
+      ];
+      
       this.resize();
       this.init();
       this.animate();
@@ -48,7 +64,10 @@
           radius: Math.random() * 2.5 + 1.5,
           color: Math.random() > 0.6 ? '#BD5931' : '#60a5fa',
           pulsePhase: Math.random() * Math.PI * 2,
-          pulseSpeed: 0.03
+          pulseSpeed: 0.03,
+          label: this.agentTerms[Math.floor(Math.random() * this.agentTerms.length)],
+          hoverTime: 0,
+          showLabel: false
         });
       }
       
@@ -70,6 +89,28 @@
       this.ctx.shadowColor = particle.color;
       this.ctx.fill();
       this.ctx.shadowBlur = 0;
+      
+      // Draw label if hovering long enough
+      if (particle.showLabel) {
+        this.ctx.font = 'bold 12px Inter, sans-serif';
+        this.ctx.fillStyle = particle.color;
+        this.ctx.textAlign = 'center';
+        this.ctx.textBaseline = 'middle';
+        
+        // Background for readability
+        const textWidth = this.ctx.measureText(particle.label).width;
+        this.ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+        this.ctx.fillRect(
+          particle.x - textWidth / 2 - 4,
+          particle.y - 20,
+          textWidth + 8,
+          16
+        );
+        
+        // Text
+        this.ctx.fillStyle = particle.color;
+        this.ctx.fillText(particle.label, particle.x, particle.y - 12);
+      }
     }
     
     drawConnection(p1, p2, distance) {
@@ -86,11 +127,24 @@
       particle.x += particle.vx;
       particle.y += particle.vy;
       
-      // Enhanced mouse interaction (UNIFORM for all particles)
+      // Check if mouse is hovering over this particle
       if (this.mouse.x !== null) {
         const dx = this.mouse.x - particle.x;
         const dy = this.mouse.y - particle.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
+        
+        // If hovering close, increment hover time
+        if (dist < 30) {
+          particle.hoverTime += 1;
+          if (particle.hoverTime > 30) { // ~0.5 seconds at 60fps
+            particle.showLabel = true;
+          }
+        } else {
+          particle.hoverTime = Math.max(0, particle.hoverTime - 2);
+          if (particle.hoverTime === 0) {
+            particle.showLabel = false;
+          }
+        }
         
         // Attraction zone (medium distance) - SAME strength for all
         if (dist < 200 && dist > 50) {
@@ -104,6 +158,12 @@
           const force = 0.002;
           particle.vx -= dx * force;
           particle.vy -= dy * force;
+        }
+      } else {
+        // Mouse left, fade out labels
+        particle.hoverTime = Math.max(0, particle.hoverTime - 2);
+        if (particle.hoverTime === 0) {
+          particle.showLabel = false;
         }
       }
       
