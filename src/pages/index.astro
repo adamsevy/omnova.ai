@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import ParticleNetwork from '~/components/ParticleNetwork.astro';
 
 const metadata = {
   title: 'OmNova - Impossible Teams: The Dawn of Permissionless Genius',
@@ -11,9 +12,8 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- SECTION 1: HERO -->
   <section class="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 py-32 md:py-40 overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,white_1px,transparent_0)] bg-[length:40px_40px]"></div>
-    </div>
+    <!-- Particle Network Background -->
+    <ParticleNetwork />
     
     <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center">
