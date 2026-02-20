@@ -1,4 +1,55 @@
 ---
+import { SITE } from 'astrowind:config';
+import { getHomePermalink } from '~/utils/permalinks';
+
+interface Link {
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+  icon?: string;
+}
+
+interface Links {
+  title?: string;
+  links: Array<Link>;
+}
+
+export interface Props {
+  links: Array<Links>;
+  secondaryLinks: Array<Link>;
+  socialLinks: Array<Link>;
+  footNote?: string;
+  theme?: string;
+}
+
+const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+const currentYear = new Date().getFullYear();
+const displayNote = footNote || `© ${currentYear} OmNova Dynamis. All rights reserved.`;
+---
+
+<footer class="relative border-t border-gray-200 not-prose bg-white">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="py-6 md:flex md:items-center md:justify-between">
+      <div class="text-sm text-gray-600">
+        <Fragment set:html={displayNote} />
+      </div>
+      <div class="text-sm text-gray-600 flex gap-1 mt-4 md:mt-0">
+        {
+          secondaryLinks.map(({ text, href }, index) => (
+            <>
+              {index !== 0 ? ' · ' : ''}
+              <a
+                class="text-gray-600 hover:text-gray-900 hover:underline transition duration-150 ease-in-out"
+                href={href}
+                set:html={text}
+              />
+            </>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</footer>---
 import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
