@@ -11,9 +11,12 @@
       this.ctx = canvas.getContext('2d');
       this.particles = [];
       this.connectionDistance = 180;
-      this.particleCount = 70; // Sweet spot between 60 and 80
+      this.particleCount = 70;
       this.mouse = { x: null, y: null };
       this.animationFrame = null;
+      this.mouseStoppedTimeout = null;
+      this.mouseActive = false;
+      this.mouseIdleDelay = 1500; // 1.5 seconds of no movement
       
       this.resize();
       this.init();
@@ -38,15 +41,26 @@
             mouseY >= 0 && mouseY <= this.canvas.height) {
           this.mouse.x = mouseX;
           this.mouse.y = mouseY;
+          this.mouseActive = true;
+          
+          // Reset the timeout - restart counting idle time
+          clearTimeout(this.mouseStoppedTimeout);
+          this.mouseStoppedTimeout = setTimeout(() => {
+            this.mouseActive = false;
+          }, this.mouseIdleDelay);
         } else {
           this.mouse.x = null;
           this.mouse.y = null;
+          this.mouseActive = false;
+          clearTimeout(this.mouseStoppedTimeout);
         }
       });
       
       canvas.addEventListener('mouseleave', () => {
         this.mouse.x = null;
         this.mouse.y = null;
+        this.mouseActive = false;
+        clearTimeout(this.mouseStoppedTimeout);
       });
     }
     
@@ -68,12 +82,12 @@
           y: Math.random() * this.canvas.height,
           originalX: 0,
           originalY: 0,
-          vx: (Math.random() - 0.5) * 0.3, // Natural variance in speed
+          vx: (Math.random() - 0.5) * 0.3,
           vy: (Math.random() - 0.5) * 0.3,
           radius: Math.random() * 2.5 + 1.5,
           color: Math.random() > 0.6 ? '#BD5931' : '#60a5fa',
           pulsePhase: Math.random() * Math.PI * 2,
-          pulseSpeed: Math.random() * 0.02 + 0.015 // Varied pulse speeds for organic feel
+          pulseSpeed: Math.random() * 0.02 + 0.015
         });
       }
       
@@ -111,8 +125,8 @@
       particle.x += particle.vx;
       particle.y += particle.vy;
       
-      // Gentle mouse interaction - responsive but not aggressive
-      if (this.mouse.x !== null) {
+      // Mouse interaction - only when mouse is actively moving
+      if (this.mouse.x !== null && this.mouseActive) {
         const dx = this.mouse.x - particle.x;
         const dy = this.mouse.y - particle.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
@@ -132,14 +146,15 @@
         }
       }
       
-      // Gentle spring force back to original position
+      // Spring force back to original position
       const dxFromOrigin = particle.originalX - particle.x;
       const dyFromOrigin = particle.originalY - particle.y;
       const distFromOrigin = Math.sqrt(dxFromOrigin * dxFromOrigin + dyFromOrigin * dyFromOrigin);
       
-      // Very gentle pull back - allows natural wandering
+      // When mouse is idle or not present, stronger pull back to origin
+      const springForce = this.mouseActive ? 0.00018 : 0.0004; // Stronger when idle
+      
       if (distFromOrigin > 40) {
-        const springForce = 0.00018;
         particle.vx += dxFromOrigin * springForce;
         particle.vy += dyFromOrigin * springForce;
       }
@@ -208,8 +223,8 @@
           }
         }
         
-        // Draw connections to mouse
-        if (this.mouse.x !== null) {
+        // Draw connections to mouse - only when actively moving
+        if (this.mouse.x !== null && this.mouseActive) {
           const dx = this.particles[i].x - this.mouse.x;
           const dy = this.particles[i].y - this.mouse.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
