@@ -9,7 +9,7 @@ const navigation = [
 ];
 ---
 
-<header class="header-new fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+<header class="header-new fixed top-0 left-0 right-0 z-50">
   <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
     <div class="flex items-center justify-between h-20 md:h-24">
       <!-- Logo -->
@@ -35,7 +35,7 @@ const navigation = [
       <div class="hidden md:block">
         <a
           href="#contact"
-          class="inline-flex items-center px-6 lg:px-8 py-3 lg:py-3.5 text-base lg:text-lg font-bold rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+          class="cta-button inline-flex items-center px-6 lg:px-8 py-3 lg:py-3.5 text-base lg:text-lg font-bold rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
         >
           Start Conversation
         </a>
@@ -70,18 +70,31 @@ const navigation = [
 </header>
 
 <style>
-  /* Header background transitions */
+  /* Header stays transparent with subtle backdrop blur */
   .header-new {
     background: transparent;
+    backdrop-filter: blur(0px);
+    transition: backdrop-filter 0.3s ease;
   }
 
+  /* On scroll: subtle blur only, no background color */
   .header-new.scrolled {
-    background: rgba(30, 58, 138, 0.95);
     backdrop-filter: blur(12px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(30, 58, 138, 0.1); /* Very subtle tint */
   }
+
+  /* If you want NO background at all on scroll, use this instead: */
+  /* 
+  .header-new.scrolled {
+    backdrop-filter: blur(12px);
+  }
+  */
 
   /* Nav link hover effect */
+  .nav-link {
+    position: relative;
+  }
+
   .nav-link::after {
     content: '';
     position: absolute;
@@ -108,6 +121,32 @@ const navigation = [
   .logo-link {
     cursor: pointer;
   }
+
+  /* CTA button enhanced shine effect */
+  .cta-button {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: left 0.5s;
+  }
+
+  .cta-button:hover::before {
+    left: 100%;
+  }
 </style>
 
 <script>
@@ -117,8 +156,7 @@ const navigation = [
     const mobileMenu = document.querySelector('.mobile-menu');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-    // Header scroll effect
-    let lastScroll = 0;
+    // Header scroll effect - very subtle
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset;
       
@@ -127,8 +165,6 @@ const navigation = [
       } else {
         header?.classList.remove('scrolled');
       }
-      
-      lastScroll = currentScroll;
     });
 
     // Mobile menu toggle
@@ -146,7 +182,7 @@ const navigation = [
     });
 
     // Smooth scroll for all navigation links
-    const allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link, a[href="#contact"]');
+    const allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link, .cta-button, a[href="#contact"]');
     allNavLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         const href = link.getAttribute('href');
