@@ -1,6 +1,665 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import ParticleNetwork from '~/components/ParticleNetwork.astro';
+import Button from '~/components/ui/Button.astro';
+
+const metadata = {
+  title: 'OmNova - Find What\'s Hidden. Get a Plan. Move Fast.',
+  description: 'Deploy AI teams that analyze everything, synthesize insights, and deliver decision-ready plans—in days, not months.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- SECTION 1: HERO -->
+  <section class="hero-section relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 py-20 sm:py-24 md:py-32 lg:py-40 overflow-hidden">
+    <!-- Particle Network Background -->
+    <ParticleNetwork />
+    
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <!-- Main Headline -->
+        <h1 class="hero-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight tracking-tight">
+          Find what's hidden.<br />
+          Get a plan.<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600">Move fast.</span>
+        </h1>
+        
+        <!-- Subheadline -->
+        <p class="hero-subhead text-lg sm:text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-8 md:mb-10 leading-relaxed px-4">
+          Deploy AI teams that analyze everything, synthesize insights, and deliver decision-ready plans—in days, not months.
+        </p>
+        
+        <!-- Proof Points -->
+        <ul class="proof-points flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4 sm:gap-6 text-base md:text-lg text-white/90 mb-10 md:mb-12 px-4 max-w-4xl mx-auto">
+          <li class="flex items-center gap-3 justify-center">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Analyze 100% of everything, not the 1% you had to settle for</span>
+          </li>
+          <li class="flex items-center gap-3 justify-center">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Turn 6 months of work into 48 hours</span>
+          </li>
+          <li class="flex items-center gap-3 justify-center">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Get answers you can act on immediately</span>
+          </li>
+        </ul>
+
+        <!-- CTAs -->
+        <div class="cta-buttons flex flex-col sm:flex-row gap-4 justify-center mb-12 md:mb-16 px-4">
+          <Button variant="primary" size="lg" href="#how-it-works">
+            See How It Works
+          </Button>
+          <Button variant="secondary" size="lg" href="#contact">
+            What Can't You See?
+          </Button>
+        </div>
+
+        <!-- Trust Signal -->
+        <p class="text-sm md:text-base text-white/60">
+          Trusted by PE firms, franchise networks, and system integrators
+        </p>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:block">
+      <a href="#social-proof" class="animate-bounce text-white/60 hover:text-white/90 transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- SECTION 2: SOCIAL PROOF -->
+  <section id="social-proof" class="social-proof-section relative bg-gradient-to-b from-primary-900 via-primary-800 to-gray-900 text-white py-16 md:py-20">
+    <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-8 md:mb-12 text-white/90">
+        Organizations Using Impossible Teams
+      </h2>
+      
+      <!-- Proof Points (since you may not have logos yet) -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-sm md:text-base">
+        <div class="proof-item flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center mb-2">
+            <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <p class="text-gray-300">PE-backed franchise networks<br />across 40 states</p>
+        </div>
+        
+        <div class="proof-item flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center mb-2">
+            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <p class="text-gray-300">System integrators<br />serving Fortune 500</p>
+        </div>
+        
+        <div class="proof-item flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center mb-2">
+            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <p class="text-gray-300">Multi-location operators<br />managing 200+ locations</p>
+        </div>
+        
+        <div class="proof-item flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mb-2">
+            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <p class="text-gray-300">Investment firms<br />monitoring thousands of companies</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: THREE CORE JOBS -->
+  <section id="three-jobs" class="three-jobs-section relative bg-gradient-to-b from-gray-900 to-gray-950 text-white py-20 md:py-32">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
+          Three Jobs That Were Impossible—<br class="hidden sm:block" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Until Now</span>
+        </h2>
+        <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+          Not faster. Not cheaper. <span class="text-white font-semibold">Structurally impossible</span> without coordination at scale.
+        </p>
+      </div>
+
+      <!-- Job Cards -->
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8 mb-12">
+        <!-- Job 1: Find the Signal -->
+        <div class="job-card group bg-gray-800/50 backdrop-blur border-2 border-gray-700 hover:border-cyan-500 rounded-2xl p-6 md:p-8 transition-all duration-300 cursor-pointer hover:shadow-xl hover:shadow-cyan-500/20 hover:-translate-y-1">
+          <div class="flex items-center justify-center w-16 h-16 rounded-full bg-cyan-500/20 mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          
+          <h3 class="text-2xl md:text-3xl font-bold mb-4 group-hover:text-cyan-400 transition-colors">
+            Find the Signal<br />in the Noise
+          </h3>
+          
+          <p class="text-base md:text-lg text-gray-400 group-hover:text-gray-300 transition-colors mb-6">
+            When you can't see what matters because there's too much to analyze.
+          </p>
+          
+          <ul class="space-y-3 text-sm md:text-base text-gray-300">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 mt-1">→</span>
+              <span>Review 15,000 companies across 50 languages</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 mt-1">→</span>
+              <span>Analyze 100% of documents, not 1%</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 mt-1">→</span>
+              <span>Monitor every market, every day</span>
+            </li>
+          </ul>
+          
+          <div class="card-expand-hint mt-6 text-sm text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+            Click to see example →
+          </div>
+        </div>
+
+        <!-- Job 2: Build the Plan -->
+        <div class="job-card group bg-gray-800/50 backdrop-blur border-2 border-gray-700 hover:border-orange-500 rounded-2xl p-6 md:p-8 transition-all duration-300 cursor-pointer hover:shadow-xl hover:shadow-orange-500/20 hover:-translate-y-1">
+          <div class="flex items-center justify-center w-16 h-16 rounded-full bg-orange-500/20 mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          
+          <h3 class="text-2xl md:text-3xl font-bold mb-4 group-hover:text-orange-400 transition-colors">
+            Turn Complexity<br />Into a Plan
+          </h3>
+          
+          <p class="text-base md:text-lg text-gray-400 group-hover:text-gray-300 transition-colors mb-6">
+            When you need insights turned into something you can act on.
+          </p>
+          
+          <ul class="space-y-3 text-sm md:text-base text-gray-300">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-400 mt-1">→</span>
+              <span>Convert 10,000 documents into a decision brief</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-400 mt-1">→</span>
+              <span>Build strategies in 48 hours, not 6 months</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-400 mt-1">→</span>
+              <span>Get recommendations backed by complete analysis</span>
+            </li>
+          </ul>
+          
+          <div class="card-expand-hint mt-6 text-sm text-orange-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+            Click to see example →
+          </div>
+        </div>
+
+        <!-- Job 3: Compress Time -->
+        <div class="job-card group bg-gray-800/50 backdrop-blur border-2 border-gray-700 hover:border-purple-500 rounded-2xl p-6 md:p-8 transition-all duration-300 cursor-pointer hover:shadow-xl hover:shadow-purple-500/20 hover:-translate-y-1">
+          <div class="flex items-center justify-center w-16 h-16 rounded-full bg-purple-500/20 mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          
+          <h3 class="text-2xl md:text-3xl font-bold mb-4 group-hover:text-purple-400 transition-colors">
+            Compress Time<br />to Outcome
+          </h3>
+          
+          <p class="text-base md:text-lg text-gray-400 group-hover:text-gray-300 transition-colors mb-6">
+            When speed has direct economic value.
+          </p>
+          
+          <ul class="space-y-3 text-sm md:text-base text-gray-300">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-400 mt-1">→</span>
+              <span>Deploy 500 analysts overnight</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-400 mt-1">→</span>
+              <span>Turn months into days</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-400 mt-1">→</span>
+              <span>Move while competitors are still planning</span>
+            </li>
+          </ul>
+          
+          <div class="card-expand-hint mt-6 text-sm text-purple-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+            Click to see example →
+          </div>
+        </div>
+      </div>
+
+      <!-- Call-out -->
+      <div class="text-center">
+        <p class="text-xl md:text-2xl text-cyan-400 font-semibold mb-2">
+          The constraint is no longer resources.
+        </p>
+        <p class="text-2xl md:text-3xl text-white font-bold">
+          It's imagination.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: BEFORE/AFTER -->
+  <section class="before-after-section relative bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white py-20 md:py-32">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+          The Old Way vs. <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">The New Reality</span>
+        </h2>
+      </div>
+
+      <!-- Split Comparison -->
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+        <!-- OLD WAY -->
+        <div class="comparison-col old-way bg-gray-800/30 border border-gray-700 rounded-2xl p-6 md:p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-400">The Old Way</h3>
+          </div>
+          
+          <ul class="space-y-4 text-sm md:text-base text-gray-400">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Hire 50 analysts? Months of recruiting, millions in cost</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Review 1% of documents because 100% is impossible</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Coordinate across time zones, cultures, politics</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Choose: speed, quality, or cost. Pick two.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- NEW REALITY -->
+        <div class="comparison-col new-way bg-gradient-to-br from-cyan-900/30 to-blue-900/30 border-2 border-cyan-500/50 rounded-2xl p-6 md:p-8 shadow-xl shadow-cyan-500/10">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-full bg-cyan-500/30 flex items-center justify-center">
+              <svg class="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold text-white">The New Reality</h3>
+          </div>
+          
+          <ul class="space-y-4 text-sm md:text-base text-gray-100">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Deploy 500 AI specialists in 48 hours</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Analyze 100% of everything, simultaneously</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Zero meetings, zero politics, perfect coordination</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Get all three: speed, quality, AND scale</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="text-center mt-12 md:mt-16">
+        <a href="#examples" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition group text-base md:text-lg font-semibold">
+          <span>See what becomes possible</span>
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: EXAMPLES -->
+  <section id="examples" class="examples-section relative bg-gradient-to-b from-gray-950 to-gray-900 text-white py-20 md:py-32">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
+          Jobs That Were <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Literally Impossible</span>
+        </h2>
+        <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+          Until teams could coordinate at scale.
+        </p>
+      </div>
+
+      <!-- Example Cards -->
+      <div class="grid sm:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+        <!-- Example 1: PE/VC -->
+        <button class="example-card group bg-gray-800/50 border-2 border-gray-700 hover:border-orange-500 p-6 md:p-8 rounded-2xl transition-all text-left hover:shadow-xl hover:shadow-orange-500/20 hover:-translate-y-1">
+          <div class="flex items-start justify-between mb-4">
+            <div class="inline-block rounded-lg px-3 py-1 border border-orange-500 bg-orange-500/20">
+              <span class="text-orange-400 font-bold uppercase tracking-wide text-xs">PE/VC</span>
+            </div>
+            <svg class="w-6 h-6 text-gray-500 group-hover:text-orange-500 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 group-hover:text-orange-400 transition">Complete Due Diligence in 48 Hours</h3>
+          <p class="text-sm md:text-base text-gray-400 group-hover:text-gray-300 transition">
+            Review <strong class="text-white">100% of documents</strong>, not 1%. Get Big 4-level depth across every dimension—financial, legal, operational, market—before you commit.
+          </p>
+        </button>
+
+        <!-- Example 2: Enterprise -->
+        <button class="example-card group bg-gray-800/50 border-2 border-gray-700 hover:border-cyan-500 p-6 md:p-8 rounded-2xl transition-all text-left hover:shadow-xl hover:shadow-cyan-500/20 hover:-translate-y-1">
+          <div class="flex items-start justify-between mb-4">
+            <div class="inline-block rounded-lg px-3 py-1 border border-cyan-500 bg-cyan-500/20">
+              <span class="text-cyan-400 font-bold uppercase tracking-wide text-xs">Enterprise</span>
+            </div>
+            <svg class="w-6 h-6 text-gray-500 group-hover:text-cyan-500 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 group-hover:text-cyan-400 transition">Monitor 15,000 Markets Simultaneously</h3>
+          <p class="text-sm md:text-base text-gray-400 group-hover:text-gray-300 transition">
+            Track every company, regulation, and risk signal—in <strong class="text-white">50 languages</strong>, across 195 jurisdictions. Never miss a market shift.
+          </p>
+        </button>
+
+        <!-- Example 3: Multi-Location -->
+        <button class="example-card group bg-gray-800/50 border-2 border-gray-700 hover:border-purple-500 p-6 md:p-8 rounded-2xl transition-all text-left hover:shadow-xl hover:shadow-purple-500/20 hover:-translate-y-1">
+          <div class="flex items-start justify-between mb-4">
+            <div class="inline-block rounded-lg px-3 py-1 border border-purple-500 bg-purple-500/20">
+              <span class="text-purple-400 font-bold uppercase tracking-wide text-xs">Multi-Location</span>
+            </div>
+            <svg class="w-6 h-6 text-gray-500 group-hover:text-purple-500 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 group-hover:text-purple-400 transition">Run 1,000 Localized Campaigns at Once</h3>
+          <p class="text-sm md:text-base text-gray-400 group-hover:text-gray-300 transition">
+            Hyperlocal marketing at national scale. Each campaign tailored to neighborhood demographics. <strong class="text-white">No human team</strong> could coordinate this.
+          </p>
+        </button>
+
+        <!-- Example 4: Compliance -->
+        <button class="example-card group bg-gray-800/50 border-2 border-gray-700 hover:border-green-500 p-6 md:p-8 rounded-2xl transition-all text-left hover:shadow-xl hover:shadow-green-500/20 hover:-translate-y-1">
+          <div class="flex items-start justify-between mb-4">
+            <div class="inline-block rounded-lg px-3 py-1 border border-green-500 bg-green-500/20">
+              <span class="text-green-400 font-bold uppercase tracking-wide text-xs">Compliance</span>
+            </div>
+            <svg class="w-6 h-6 text-gray-500 group-hover:text-green-500 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 group-hover:text-green-400 transition">Audit Every Transaction, Not Samples</h3>
+          <p class="text-sm md:text-base text-gray-400 group-hover:text-gray-300 transition">
+            See patterns that only appear when you analyze <strong class="text-white">100% of the data</strong>, not 1-5% samples. Find what audits miss.
+          </p>
+        </button>
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="text-center mt-12 md:mt-16">
+        <p class="text-lg md:text-xl text-gray-400 mb-6">
+          What's <em>your</em> impossible job?
+        </p>
+        <a href="#contact" class="inline-flex items-center text-orange-500 hover:text-orange-400 transition group font-semibold text-base md:text-lg">
+          <span>Let's find out what becomes possible</span>
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: HOW IT WORKS -->
+  <section id="how-it-works" class="how-it-works-section relative bg-gradient-to-b from-gray-900 to-primary-900 text-white py-20 md:py-32">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
+          From Impossible to Done
+        </h2>
+        <p class="text-lg md:text-xl text-gray-400">
+          Three steps. No meetings. No politics. Just results.
+        </p>
+      </div>
+
+      <!-- Steps -->
+      <div class="space-y-12 md:space-y-16 relative">
+        <!-- Connecting Line -->
+        <div class="timeline-line absolute left-8 top-16 bottom-16 w-0.5 bg-gradient-to-b from-orange-500 via-cyan-500 to-purple-500 hidden md:block"></div>
+
+        <!-- Step 1 -->
+        <div class="step-item flex flex-col md:flex-row items-start gap-6 md:gap-8 relative">
+          <div class="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-2xl md:text-3xl font-bold shadow-xl z-10">
+            1
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl md:text-3xl font-bold mb-3 md:mb-4">Tell us what you can't see</h3>
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed">
+              Describe your complexity. What work would transform your organization—if only it were possible? We help you articulate the impossible.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-item flex flex-col md:flex-row items-start gap-6 md:gap-8 relative">
+          <div class="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center text-2xl md:text-3xl font-bold shadow-xl z-10">
+            2
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl md:text-3xl font-bold mb-3 md:mb-4">We deploy your impossible team</h3>
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed">
+              AI specialists that collaborate like expert humans—but at scale no human team could match. Coordinated, 24/7, with human oversight at key decision points.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-item flex flex-col md:flex-row items-start gap-6 md:gap-8 relative">
+          <div class="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-2xl md:text-3xl font-bold shadow-xl z-10">
+            3
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl md:text-3xl font-bold mb-3 md:mb-4">You get decision-ready answers</h3>
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed">
+              Insights you can act on immediately. Complete analysis. Full provenance. Ready to decide. From discovery to action in days, not months.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: FINAL CTA -->
+  <section id="contact" class="cta-section relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 py-20 md:py-32 overflow-hidden">
+    <!-- Subtle particle background -->
+    <div class="absolute inset-0 opacity-20">
+      <ParticleNetwork />
+    </div>
+
+    <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 md:mb-8">
+        What's Your Impossible Job?
+      </h2>
+      <p class="text-lg md:text-2xl text-white/90 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">
+        Not faster humans. Not automation.<br />
+        Work that's <span class="font-bold">structurally impossible</span> without coordination at scale.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 md:mb-16">
+        <Button variant="primary" size="lg" href="mailto:hello@omnova.ai">
+          Start the Conversation
+        </Button>
+        <Button variant="secondary" size="lg" href="mailto:hello@omnova.ai">
+          Email Us
+        </Button>
+      </div>
+
+      <!-- Trust Signals -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-sm md:text-base text-white/60 mb-8">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+          </svg>
+          <span>Enterprise-grade security</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span>Your data stays yours</span>
+        </div>
+      </div>
+
+      <p class="text-sm md:text-base text-white/60">
+        Serving PE/VC firms, enterprise strategists, and organizations ready to accomplish the impossible
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Example cards clickable styling */
+  .example-card {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Job cards clickable styling */
+  .job-card {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .hero-headline {
+      font-size: 2.5rem;
+      line-height: 1.1;
+    }
+    
+    .proof-points {
+      font-size: 0.875rem;
+    }
+  }
+
+  /* Timeline animation on scroll (optional enhancement) */
+  @keyframes drawLine {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Fix logo click to prevent animation breaking
+    const logoLink = document.querySelector('a[href="/"]');
+    if (logoLink) {
+      logoLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Make example cards clickable (scroll to contact)
+    const exampleCards = document.querySelectorAll('.example-card');
+    exampleCards.forEach(card => {
+      card.addEventListener('click', () => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Make job cards clickable (for now, scroll to examples)
+    const jobCards = document.querySelectorAll('.job-card');
+    jobCards.forEach(card => {
+      card.addEventListener('click', () => {
+        document.getElementById('examples')?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Optional: Add intersection observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -10% 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe sections for animations
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>---
+import Layout from '~/layouts/PageLayout.astro';
+import ParticleNetwork from '~/components/ParticleNetwork.astro';
 
 const metadata = {
   title: 'OmNova - Impossible Teams: The Dawn of Permissionless Genius',
