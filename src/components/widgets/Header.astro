@@ -12,8 +12,8 @@ const navigation = [
 <header class="header-new fixed top-0 left-0 right-0 z-50">
   <nav class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12" aria-label="Main navigation">
     <div class="flex items-center justify-between h-20 md:h-24">
-      <!-- Logo - moved left with padding -->
-      <div class="flex-shrink-0 -ml-2">
+      <!-- Logo - moved left more and 10% bigger -->
+      <div class="flex-shrink-0 -ml-6 scale-110">
         <a href="/" class="logo-link inline-block transition-opacity hover:opacity-80" aria-label="OmNova home">
           <Logo />
         </a>
@@ -31,11 +31,11 @@ const navigation = [
         ))}
       </div>
 
-      <!-- CTA Button (Desktop) - smaller and moved right -->
-      <div class="hidden md:block -mr-2">
+      <!-- CTA Button (Desktop) - softer orange, moved right more -->
+      <div class="hidden md:block -mr-6">
         <a
           href="#contact"
-          class="cta-button inline-flex items-center px-5 py-2.5 text-base font-semibold rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+          class="cta-button inline-flex items-center px-5 py-2.5 text-base font-semibold rounded-full bg-gradient-to-r from-orange-400 to-orange-500 text-white hover:from-orange-500 hover:to-orange-600 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
         >
           Start Conversation
         </a>
@@ -61,7 +61,7 @@ const navigation = [
       ))}
       <a
         href="#contact"
-        class="inline-flex items-center px-10 py-4 text-xl font-bold rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-xl mt-4"
+        class="inline-flex items-center px-10 py-4 text-xl font-bold rounded-full bg-gradient-to-r from-orange-400 to-orange-500 text-white shadow-xl mt-4"
       >
         Start Conversation
       </a>
@@ -94,7 +94,7 @@ const navigation = [
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, #f97316, #ea580c);
+    background: linear-gradient(90deg, #fb923c, #f97316);
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
