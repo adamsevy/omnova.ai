@@ -70,25 +70,17 @@ const navigation = [
 </header>
 
 <style>
-  /* Header stays transparent with subtle backdrop blur */
+  /* Header stays completely transparent and seamless */
   .header-new {
     background: transparent;
-    backdrop-filter: blur(0px);
-    transition: backdrop-filter 0.3s ease;
+    transition: all 0.3s ease;
   }
 
-  /* On scroll: subtle blur only, no background color */
+  /* No changes on scroll - stays invisible */
   .header-new.scrolled {
-    backdrop-filter: blur(12px);
-    background: rgba(30, 58, 138, 0.1); /* Very subtle tint */
+    /* Optionally add a VERY subtle hint: */
+    /* background: rgba(30, 58, 138, 0.05); */
   }
-
-  /* If you want NO background at all on scroll, use this instead: */
-  /* 
-  .header-new.scrolled {
-    backdrop-filter: blur(12px);
-  }
-  */
 
   /* Nav link hover effect */
   .nav-link {
@@ -147,6 +139,12 @@ const navigation = [
   .cta-button:hover::before {
     left: 100%;
   }
+
+  /* Ensure text is always readable */
+  .nav-link,
+  .logo-link {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
 </style>
 
 <script>
@@ -156,7 +154,7 @@ const navigation = [
     const mobileMenu = document.querySelector('.mobile-menu');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-    // Header scroll effect - very subtle
+    // Optional: Keep scroll class for potential future use
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset;
       
