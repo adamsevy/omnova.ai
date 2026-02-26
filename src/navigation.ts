@@ -1,29 +1,21 @@
-import { getPermalink } from './utils/permalinks';
+import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
       text: 'Platform',
-      href: getPermalink('/#platform'),
+      href: getPermalink('/#how-it-works'),
     },
     {
-      text: 'Services',
-      href: getPermalink('/#services'),
+      text: 'Solutions',
+      href: getPermalink('/#examples'),
     },
     {
-      text: 'Technology',
-      href: getPermalink('/#technology'),
-    },
-  ],
-  actions: [
-    {
-      text: 'Schedule Demo',
+      text: 'Contact',
       href: getPermalink('/#contact'),
-      variant: 'primary',
     },
   ],
-  showToggleTheme: false,
-  showRssFeed: false,
+  actions: [{ text: 'Schedule Demo', href: getPermalink('/#contact'), target: '_self' }],
 };
 
 export const footerData = {
@@ -33,5 +25,7 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [],
-  footerNote: `© ${new Date().getFullYear()} OmNova Dynamis. All rights reserved.`,
+  footNote: `
+    © ${new Date().getFullYear()} OmNova. All rights reserved.
+  `,
 };
