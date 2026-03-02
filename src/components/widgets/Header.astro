@@ -35,7 +35,7 @@ const currentPath = new URL(Astro.request.url).pathname;
 ---
 
 <header
-  class="fixed top-0 left-0 right-0 z-50 bg-transparent"
+  class="absolute top-0 left-0 right-0 z-50 w-full"
   {...isSticky ? { 'data-aw-sticky-header': true } : {}}
   {...id ? { id } : {}}
 >
@@ -93,6 +93,7 @@ const currentPath = new URL(Astro.request.url).pathname;
 
 <style>
   header {
+    background: transparent;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
   }
