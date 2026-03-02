@@ -90,16 +90,18 @@ const {
     right: 0;
     z-index: 9999;
     width: 100%;
-    background: rgba(15, 23, 42, 0.6) !important;
+    background: rgba(15, 23, 42, 0.85) !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: none !important;
+    box-shadow: none !important;
   }
 
   .header-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 1rem 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem 2rem;
     background: transparent !important;
   }
 
@@ -108,12 +110,16 @@ const {
     align-items: center;
     justify-content: space-between;
     background: transparent !important;
+    width: 100%;
+    gap: 2rem;
   }
 
   .logo-wrapper {
     display: flex;
     align-items: center;
     background: transparent !important;
+    flex-shrink: 0;
+    margin-right: auto;
   }
 
   .logo-link {
@@ -132,6 +138,9 @@ const {
     align-items: center;
     gap: 2rem;
     background: transparent !important;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   @media (min-width: 768px) {
@@ -157,6 +166,8 @@ const {
     display: none;
     align-items: center;
     background: transparent !important;
+    flex-shrink: 0;
+    margin-left: auto;
   }
 
   @media (min-width: 768px) {
@@ -173,16 +184,16 @@ const {
     font-size: 0.875rem;
     font-weight: 600;
     color: #ffffff !important;
-    background: linear-gradient(135deg, #fb923c 0%, #f97316 100%) !important;
+    background: linear-gradient(135deg, #BD5931 0%, #9A4826 100%) !important;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(251, 146, 60, 0.2);
+    box-shadow: 0 4px 12px rgba(189, 89, 49, 0.2);
   }
 
   .cta-button:hover {
-    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%) !important;
-    box-shadow: 0 8px 20px rgba(251, 146, 60, 0.35);
+    background: linear-gradient(135deg, #9A4826 0%, #7d3a1f 100%) !important;
+    box-shadow: 0 8px 20px rgba(189, 89, 49, 0.35);
     transform: translateY(-2px);
   }
 
@@ -195,6 +206,7 @@ const {
     cursor: pointer;
     transition: color 0.2s;
     padding: 0;
+    flex-shrink: 0;
   }
 
   @media (min-width: 768px) {
