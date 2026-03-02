@@ -40,21 +40,21 @@ const currentPath = new URL(Astro.request.url).pathname;
 <header
   class:list={[
     { sticky: isSticky, relative: !isSticky, dark: isDark },
-    'top-0 z-40 flex-none mx-auto w-full transition-[opacity] ease-in-out',
+    'top-0 z-40 flex-none mx-auto w-full transition-[opacity] ease-in-out bg-transparent',
   ]}
   {...isSticky ? { 'data-aw-sticky-header': true } : {}}
   {...id ? { id } : {}}
 >
-  <div class="absolute inset-0"></div>
+  <div class="absolute inset-0 bg-transparent"></div>
   <div
     class:list={[
-      'relative py-3 px-3 md:px-6 mx-auto w-full',
+      'relative py-3 px-3 md:px-6 mx-auto w-full bg-transparent',
       {
         'max-w-7xl': !isFullWidth,
       },
     ]}
   >
-    <div class="flex justify-between">
+    <div class="flex justify-between bg-transparent">
       <div class="flex items-center">
         <a class="flex items-center" href="/">
           <Logo />
@@ -115,20 +115,44 @@ const currentPath = new URL(Astro.request.url).pathname;
 
 <style>
   header {
-    background: transparent;
-    backdrop-filter: none;
-    border-bottom: none;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+  }
+  
+  header > div {
+    background: transparent !important;
+  }
+
+  header .absolute.inset-0 {
+    background: transparent !important;
   }
   
   header.sticky {
     position: sticky;
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(15, 23, 42, 0.95) !important;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
+  /* Remove any white/light backgrounds from all header children */
+  header *:not(.btn-primary) {
+    background-color: transparent !important;
+  }
+
+  /* Make header text white for visibility on dark hero */
+  header a {
+    color: white !important;
+  }
+
+  header a:hover {
+    color: rgba(103, 232, 249, 1) !important; /* cyan hover */
+  }
+
   .btn-primary {
-    background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
+    background: linear-gradient(135deg, #fb923c 0%, #f97316 100%) !important;
+    color: white !important;
   }
 
   .btn-primary:hover {
