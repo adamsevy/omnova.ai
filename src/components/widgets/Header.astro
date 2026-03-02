@@ -24,77 +24,181 @@ const {
   links = [],
   actions = [],
   isSticky = false,
-  isDark = false,
-  isFullWidth = false,
-  showToggleTheme = false,
-  showRssFeed = false,
-  position = 'center',
 } = Astro.props;
-
-const currentPath = new URL(Astro.request.url).pathname;
 ---
 
 <header
-  class="absolute top-0 left-0 right-0 z-50 w-full"
-  {...isSticky ? { 'data-aw-sticky-header': true } : {}}
-  {...id ? { id } : {}}
+  id={id}
+  class="header-fixed"
 >
-  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center justify-between">
+  <div class="header-container">
+    <div class="header-content">
       <!-- Logo -->
-      <div class="flex items-center">
-        <a href="/" class="flex items-center hover:opacity-80 transition-opacity">
+      <div class="logo-wrapper">
+        <a href="/" class="logo-link">
           <Logo />
         </a>
       </div>
 
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center gap-8">
+      <nav class="desktop-nav">
         {links.map(({ text, href, ariaLabel }) => (
           <a
             href={href}
-            aria-label={ariaLabel}
-            class="text-white/90 hover:text-cyan-400 transition-colors font-medium text-sm"
+            aria-label={ariaLabel || text}
+            class="nav-link"
           >
             {text}
           </a>
         ))}
-      </div>
+      </nav>
 
       <!-- CTA Button -->
-      <div class="hidden md:flex items-center">
-        {actions?.length ? (
-          actions.map((btnProps) => (
+      {actions?.length ? (
+        <div class="cta-wrapper">
+          {actions.map((action) => (
             <a
-              {...btnProps}
-              class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-200 hover:shadow-lg hover:shadow-orange-500/25 hover:-translate-y-0.5"
+              href={action.href}
+              target={action.target}
+              class="cta-button"
             >
-              {btnProps.text}
+              {action.text}
             </a>
-          ))
-        ) : null}
-      </div>
+          ))}
+        </div>
+      ) : null}
 
       <!-- Mobile Menu Button -->
-      <div class="md:hidden">
-        <button
-          type="button"
-          class="text-white hover:text-cyan-400 transition-colors"
-          aria-label="Toggle menu"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
+      <button
+        type="button"
+        class="mobile-menu-btn"
+        aria-label="Toggle menu"
+      >
+        <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
-  </nav>
+  </div>
 </header>
 
 <style>
-  header {
+  .header-fixed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
     background: transparent;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+  }
+
+  .header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s;
+  }
+
+  .logo-link:hover {
+    opacity: 0.8;
+  }
+
+  .desktop-nav {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .desktop-nav {
+      display: flex;
+    }
+  }
+
+  .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    color: rgb(103, 232, 249);
+  }
+
+  .cta-wrapper {
+    display: none;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .cta-wrapper {
+      display: flex;
+    }
+  }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(to right, #f97316, #ea580c);
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+
+  .cta-button:hover {
+    background: linear-gradient(to right, #ea580c, #c2410c);
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-menu-btn {
+      display: none;
+    }
+  }
+
+  .mobile-menu-btn:hover {
+    color: rgb(103, 232, 249);
+  }
+
+  .menu-icon {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 </style>
