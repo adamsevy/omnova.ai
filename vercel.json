@@ -1,6 +1,13 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/((?!coming-soon|images/|_astro/|favicon|decapcms|robots\\.txt).*)",
+      "destination": "/coming-soon",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/_astro/(.*)",
